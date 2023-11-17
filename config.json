@@ -1,0 +1,20 @@
+{
+    "name": "multi-trial",
+    "models": {
+        "CNN": {
+            "parameters": {
+                "batch_size": [512],
+                "epochs": [5],
+                "lr": [1e-3]
+            }
+        },
+        "MLP": {
+            "parameters": {
+                "batch_size": [512],
+                "epochs": [5],
+                "lr": [1e-3]
+            }
+        }
+    },
+    "n_trial": 5
+}

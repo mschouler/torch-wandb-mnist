@@ -1,0 +1,31 @@
+{
+    "name": "wandbsweep",
+    "models": {    
+        "CNN": {
+            "name": "CNNgridsweep",
+            "method": "grid",
+            "metric": {
+                "goal": "minimize",
+                "name": "final_val_acc"
+            },
+            "parameters": {
+                "batch_size": {"values": [512, 1024]},
+                "epochs": {"value": 5},
+                "lr": {"values": [1e-3, 1e-1]}
+            }
+        },
+        "MLP": {
+            "name": "MLPgridsweep",
+            "method": "grid",
+            "metric": {
+                "goal": "minimize",
+                "name": "final_val_acc"
+            },
+            "parameters": {
+                "batch_size": {"values": [512, 1024]},
+                "epochs": {"value": 5},
+                "lr": {"values": [1e-3, 1e-1]}
+            }
+        }
+    }
+}
