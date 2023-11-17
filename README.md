@@ -64,8 +64,8 @@ python3 --wandb --config=wandb_config
 The results of this search are illustrated on the figures and table below (left CNN, right MLP):
 
 <p float="left">
-  <img src="Figures/wandb_cnn_figure.png" width="49%" />
-  <img src="Figures/wandb_mlp_figure.png" width="49%" />
+  <img src="docs/Figures/wandb_cnn_figure.png" width="49%" />
+  <img src="docs/Figures/wandb_mlp_figure.png" width="49%" />
 </p>
 
 |Model|lr|batch-size|epochs|validation loss [Accuracy]|
@@ -104,8 +104,8 @@ tensorboard --logdir multi-trial
 The point of running training multiple time is to extract performance statistics like the mean and standard deviations. The loss histories of the multi-trial runs are given in the figures below: 
 
 <p float="left">
-  <img src="Figures/tb_loss_train.png" width="49%" />
-  <img src="Figures/tb_loss_valid.png" width="49%" /> 
+  <img src="docs/Figures/tb_loss_train.png" width="49%" />
+  <img src="docs/Figures/tb_loss_valid.png" width="49%" /> 
 </p>
 
 The final performances are summarized in the following table, where the means of the test loss and accuracy are given ± one standard deviation:
