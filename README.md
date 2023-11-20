@@ -108,6 +108,13 @@ The point of running training multiple time is to extract performance statistics
   <img src="docs/Figures/tb_loss_valid.png" width="49%" /> 
 </p>
 
+These can be obtained by executing the post-processing script:
+```sh
+python3 tb_to_csv.py --path=multi-trial
+```
+
+**Note**: the csv files can be saved with the `--save` option.
+
 The final performances are summarized in the following table, where the means of the test loss and accuracy are given ± one standard deviation:
 
 |Model|test loss|test accuracy|
