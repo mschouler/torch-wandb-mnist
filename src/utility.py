@@ -90,7 +90,7 @@ def get_outdir(exp_name: str, NeuralNet: str, exp_list: Dict, it: int):
         for k, v in exp_list.items():
             trial_name += f"_{k}_{str(v)}"
         folder_path = os.path.join(exp_name, f"{exp_name}_{trial_name}_it_{it}")
-        os.makedirs(folder_path)
+        os.makedirs(folder_path, exist_ok=True)
         return folder_path
     return exp_name
 
@@ -120,7 +120,7 @@ def get_hypp(config: Dict):
 
 def load_config(config_name: str):
     # load the sweep config parameters
-    jf_name = config_name if config_name[-4:] == ".json" else f"{config_name}.json"
+    jf_name = config_name if config_name[-5:] == ".json" else f"{config_name}.json"
     with open(jf_name) as jf:
         config_dict = json.load(jf)
     return config_dict
