@@ -44,7 +44,7 @@ def tflog2pandas(path):
                     df_dict[arch][tag] = pd.DataFrame(data={exp_name: values})
 
                 else:
-                    df_dict[arch][tag][exp_name] = values
+                    df_dict[arch][tag][exp_name] = pd.Series(values)
 
     # Dirty catch of DataLossError
     except Exception:
